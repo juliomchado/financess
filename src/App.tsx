@@ -1,8 +1,24 @@
+import { Header } from './components/Header';
+import { AddRounded } from '@material-ui/icons';
+import { MainContainer } from './styles';
+import { Cards } from './components/Cards';
+
 
 function App() {
 
   return (
-    <h1>Hello world</h1>
+    <>
+      <Header />
+      <MainContainer>
+        <div>
+          <button>
+            <AddRounded />
+          </button>
+        </div>
+        <Cards />
+      </MainContainer>
+    </>
+
   )
 }
 

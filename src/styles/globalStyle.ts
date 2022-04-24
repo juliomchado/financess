@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     body,
     input,
     textarea,
-    select,
+    select, 
     button {
         font: 400 1.6rem "Roboto", monospace;
     }

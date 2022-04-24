@@ -4,16 +4,30 @@ import { MainContainer } from './styles';
 import { Cards } from './components/Cards';
 import { Graphic } from './components/Graphic';
 import { TableInfo } from './components/TableInfo';
+import { ReactModal } from './components/Modal';
+import { useState } from 'react';
 
 
 function App() {
 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
+
   return (
     <>
       <Header />
+      <ReactModal
+        modalIsOpen={modalIsOpen}
+        onRequestClose={closeModal}
+      >
+        <h1>Modal</h1>
+      </ReactModal>
       <MainContainer>
         <div>
-          <button>
+          <button onClick={() => setModalIsOpen(true)}>
             <AddRounded />
           </button>
         </div>

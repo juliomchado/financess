@@ -7,6 +7,8 @@ export const MainContainer = styled.main`
   margin: 0 auto;
   padding: 0 16px;
 
+  margin-bottom: 80px;
+
   > div {
     width: 100%;
 

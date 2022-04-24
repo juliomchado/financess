@@ -1,14 +1,11 @@
 import { Container, CardContent, IncomeIcon, OutcomeIcon } from "./styles"
 
-
-
-
 const Cards = () => {
     return (
         <Container>
             <CardContent>
                 <p>Entradas</p>
-                <span>R$ 1200,00 <IncomeIcon /> </span>
+                <span>R$ 3500,00 <IncomeIcon /> </span>
                 <p>Última entrada dia 24 de abril</p>
             </CardContent>
             <CardContent>
@@ -17,7 +14,7 @@ const Cards = () => {
                 <p>Última saída dia 18 de março</p>
             </CardContent>
             <CardContent>
-                <p>Entradas</p>
+                <p>Total</p>
                 <span>R$ 2000,00</span>
                 <p>Hoje</p>
             </CardContent>

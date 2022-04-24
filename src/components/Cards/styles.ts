@@ -80,6 +80,3 @@ export const OutcomeIcon = styled(TrendingDownRounded)`
   color: var(--outcome-color);
 `;
 
-// --primary-text-color: #212121;
-// --secondary-text-color: #424242;
-// --tertiary-text-color: #9E9E9E;

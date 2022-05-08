@@ -26,7 +26,6 @@ function App() {
       >
       </ReactModal>
       <MainContainer>
-
         <div>
           <button onClick={() => setModalIsOpen(true)}>
             <AddRounded />

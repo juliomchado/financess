@@ -1,8 +1,9 @@
 
 import { ReactEventHandler, ReactNode, useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import { AddButton, Container, TransactionTypeSection } from './style';
+import { AddButton, Container, InputSection, TransactionTypeSection } from './styles';
 import { ArrowDownwardOutlined, ArrowUpwardOutlined } from '@material-ui/icons';
+import Select from '../Select';
 
 interface Props {
     title: string;
@@ -33,6 +34,12 @@ export function ReactModal({ modalIsOpen, onRequestClose, children, title }: Pro
         setTransactionType(value);
     }
 
+    const selectOptions = [
+        { value: 'category_1', label: 'Categoria 1' },
+        { value: 'category_2', label: 'Categoria 2' },
+        { value: 'category_3', label: 'Categoria 3' }
+    ]
+
 
     return (
         <Modal
@@ -44,9 +51,23 @@ export function ReactModal({ modalIsOpen, onRequestClose, children, title }: Pro
             <Container>
                 <h3>{title}</h3>
                 <form action="" >
-
-                    <input type="text" placeholder='Coloque uma descrição' />
-                    <select />
+                    <InputSection>
+                        <label htmlFor="desc">Descrição</label>
+                        <input id="desc" type="text" placeholder='Coloque uma pequena descrição' />
+                    </InputSection>
+                    <Select
+                        label="Country"
+                        name="Country"
+                        options={selectOptions}
+                        placeholder="Selecione uma categoria"
+                        isClearable={true}
+                        //   value={country}
+                        //   onChange={(e: any) => setCountry(e)}
+                        //   error={countryError}
+                        //   isLoading={selectIsLoading}
+                        loadingMessage={() => "Loading..."}
+                        noOptionsMessage={() => 'Sem opções'}
+                    />
                     <TransactionTypeSection>
                         <button
                             type='button'

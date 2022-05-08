@@ -27,13 +27,28 @@ export const Container = styled.div`
 
     input {
       width: 100%;
-      height: 40px;
+      height: 48px;
 
       border-radius: 5px;
       border: 1px solid var(--primary-color);
 
       padding: 0 16px;
     }
+  }
+`;
+
+export const InputSection = styled.section`
+  width: 100%;
+
+  label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+  }
+  
+  input{
+    margin-top: 8px;
+
   }
 `;
 
@@ -81,7 +96,7 @@ export const TransactionTypeSection = styled.section`
     border-radius: 5px;
 
     font-weight: 500;
-    
+
     svg {
       width: 20px;
       height: 20px;
@@ -94,18 +109,18 @@ export const TransactionTypeSection = styled.section`
 
     border: 1px solid var(--income-color);
 
-    &:focus{
+    &:focus {
       background-color: var(--income-color-selected);
     }
   }
-  
+
   button:last-child {
     background-color: var(--outcome-color-opacity);
     color: var(--text-dif-color);
-    
+
     border: 1px solid var(--outcome-color);
 
-    &:focus{
+    &:focus {
       background-color: var(--outcome-color-selected);
     }
   }

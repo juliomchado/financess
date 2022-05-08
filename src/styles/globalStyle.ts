@@ -26,8 +26,8 @@ const GlobalStyle = createGlobalStyle`
        --income-color-opacity: #8BC34A4d;
        --outcome-color-opacity: #F443364d;
 
-       --income-color-selected: #8BC34ACC;
-       --outcome-color-selected: #F44336CC;
+       --income-color-selected: #8BC34AB3;
+       --outcome-color-selected: #F44336B3;
     }
 
     html {

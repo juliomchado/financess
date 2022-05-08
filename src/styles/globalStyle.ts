@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
        --primary-text-color: #212121;
        --secondary-text-color: #424242;
        --tertiary-text-color: #9E9E9E;
+       --text-dif-color: #ffffff;
+
+       --primary-color: #212121;
 
        --income-color: #8BC34A;
        --outcome-color: #F44336;

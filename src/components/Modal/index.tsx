@@ -1,8 +1,10 @@
 
 import { ReactNode, useEffect, useState } from 'react';
 import Modal from 'react-modal';
+import { Container } from './style';
 
 interface Props {
+    title: string;
     modalIsOpen: boolean;
     onRequestClose: () => void;
     children: ReactNode;
@@ -19,10 +21,9 @@ const customStyles = {
     },
 };
 
-
 Modal.setAppElement('#root');
 
-export function ReactModal({ modalIsOpen, onRequestClose, children }: Props) {
+export function ReactModal({ modalIsOpen, onRequestClose, children, title }: Props) {
 
     return (
         <Modal
@@ -31,7 +32,17 @@ export function ReactModal({ modalIsOpen, onRequestClose, children }: Props) {
             style={customStyles}
             contentLabel="Example Modal"
         >
-            {children}
+            <Container>
+                <h3>{title}</h3>
+                <form action="">
+
+                    <input type="text" placeholder='Coloque uma descrição' />
+                    <select />
+
+                    <button>Adicionar</button>
+                </form>
+
+            </Container>
         </Modal>
     );
 }

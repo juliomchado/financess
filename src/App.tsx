@@ -22,11 +22,11 @@ function App() {
       <ReactModal
         modalIsOpen={modalIsOpen}
         onRequestClose={closeModal}
+        title="Adicionar nova transação"
       >
-        <h1>Modal</h1>
       </ReactModal>
       <MainContainer>
-        
+
         <div>
           <button onClick={() => setModalIsOpen(true)}>
             <AddRounded />

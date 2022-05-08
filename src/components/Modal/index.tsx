@@ -1,7 +1,8 @@
 
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactEventHandler, ReactNode, useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import { Container } from './style';
+import { AddButton, Container, TransactionTypeSection } from './style';
+import { ArrowDownwardOutlined, ArrowUpwardOutlined } from '@material-ui/icons';
 
 interface Props {
     title: string;
@@ -25,6 +26,14 @@ Modal.setAppElement('#root');
 
 export function ReactModal({ modalIsOpen, onRequestClose, children, title }: Props) {
 
+    const [transactionType, setTransactionType] = useState<string | null>(null);
+
+    const handleChangeTransactionType = (value: string) => {
+
+        setTransactionType(value);
+    }
+
+
     return (
         <Modal
             isOpen={modalIsOpen}
@@ -34,12 +43,26 @@ export function ReactModal({ modalIsOpen, onRequestClose, children, title }: Pro
         >
             <Container>
                 <h3>{title}</h3>
-                <form action="">
+                <form action="" >
 
                     <input type="text" placeholder='Coloque uma descrição' />
                     <select />
+                    <TransactionTypeSection>
+                        <button
+                            type='button'
+                            onClick={(e) => handleChangeTransactionType('income')}>
+                            Adicionar
+                            <ArrowUpwardOutlined />
+                        </button >
+                        <button
+                            type='button'
+                            onClick={(e) => handleChangeTransactionType('outcome')}>
+                            Retirar
+                            <ArrowDownwardOutlined />
+                        </button>
+                    </TransactionTypeSection>
 
-                    <button>Adicionar</button>
+                    <AddButton type='submit'>Adicionar</AddButton>
                 </form>
 
             </Container>

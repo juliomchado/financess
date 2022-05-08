@@ -22,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
 
        --income-color: #8BC34A;
        --outcome-color: #F44336;
+
+       --income-color-opacity: #8BC34A4d;
+       --outcome-color-opacity: #F443364d;
+
+       --income-color-selected: #8BC34ACC;
+       --outcome-color-selected: #F44336CC;
     }
 
     html {

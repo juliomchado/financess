@@ -33,29 +33,80 @@ export const Container = styled.div`
       border: 1px solid var(--primary-color);
 
       padding: 0 16px;
-      
     }
+  }
+`;
 
-    button {
-      width: 100%;
-      border-radius: 5px;
+export const AddButton = styled.button`
+  width: 100%;
+  border-radius: 5px;
 
-      height: 48px;
+  height: 48px;
 
-      border: transparent;
+  border: transparent;
 
-      transition: 0.8s;
+  transition: 0.8s;
 
-      background-color: var(--income-color);
+  background-color: var(--income-color);
 
-      color: var(--text-dif-color);
+  color: var(--text-dif-color);
 
-      font-weight: 400;
-      font-size: 2rem;
+  font-weight: 400;
+  font-size: 2rem;
 
-      &:hover {
-        filter: brightness(0.9);
-      }
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
+
+export const TransactionTypeSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  gap: 24px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+    height: 60px;
+
+    border-radius: 5px;
+
+    font-weight: 500;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  button:first-child {
+    background-color: var(--income-color-opacity);
+    color: var(--text-dif-color);
+
+    border: 1px solid var(--income-color);
+
+    &:focus{
+      background-color: var(--income-color-selected);
+    }
+  }
+  
+  button:last-child {
+    background-color: var(--outcome-color-opacity);
+    color: var(--text-dif-color);
+    
+    border: 1px solid var(--outcome-color);
+
+    &:focus{
+      background-color: var(--outcome-color-selected);
     }
   }
 `;
